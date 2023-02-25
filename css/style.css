@@ -88,7 +88,7 @@ nav .nav-heading
     width: 100%;
 }
 
-.footer-text a:visited {
+a:link, a:visited {
     color: var(--black-color);
 }
 .footer-text a:active {
