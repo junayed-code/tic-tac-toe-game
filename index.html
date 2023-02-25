@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+
+    <!-- link css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="nav-heading">Tic tac toe</h1>
+        </div> 
+    </nav>
+
+    <div class="game-container">
+        <div class="game-content">
+            <div class="whose-turn">Your turn</div>
+            <table class="">
+                <tr>
+                    <td class="cell" id="0"></td>
+                    <td class="cell" id="1"></td>
+                    <td class="cell" id="2"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="3"></td>
+                    <td class="cell" id="4"></td>
+                    <td class="cell" id="5"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="6"></td>
+                    <td class="cell" id="7"></td>
+                    <td class="cell" id="8"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-text">Made by ❤️<a href="https://www.facebook.com/junayedakbour/">Junayed Akbor</a></div>
+    </footer>
+
+    <div class="change-game-mode"><button>Change game mode</button></div>
+
+    <div class="game-message">
+        <div class="msg-container">
+            <div class="message-box msg-box-animation">
+                <div class="start-game">
+                    <div class="title">Welcome to tic tac toe game!</div>
+                    <div class="select-opponent">
+                        <samp>You </samp><samp>Vs</samp>
+
+                        <select id="opponent">
+                            <option value="ai">Computer</option>
+                            <option value="player">Friend</option>
+                        </select>
+                    </div>
+
+                    <button id="game-start-btn" class="btn">Start Game</button>
+                </div>
+                <div class="end-game hide">
+                    <div class="msg"></div>
+                    <button type="reset" class="restart btn">Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript file -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
