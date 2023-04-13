@@ -9,8 +9,11 @@ const utls = (function () {
         cell.classList.add(mark);
     };
 
+    // play audio sound
     utilities.playSound = (name) => {
-        new Audio(`../sounds/${name}.mp3`).play();
+        const audio = new Audio(`../../../sounds/${name}.mp3`);
+        audio.play();
+        return audio;
     };
 
     return utilities;
