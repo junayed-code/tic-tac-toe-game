@@ -11,7 +11,7 @@ const utls = (function () {
 
     // play audio sound
     utilities.playSound = (name) => {
-        const audio = new Audio(`../../../sounds/${name}.mp3`);
+        const audio = new Audio(`sounds/${name}.mp3`);
         audio.play();
         return audio;
     };
