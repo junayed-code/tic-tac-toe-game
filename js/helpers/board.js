@@ -1,3 +1,5 @@
+"use strict";
+
 const WINNING_COMBINATIONS = [
     [0, 1, 2],
     [3, 4, 5],
@@ -9,14 +11,18 @@ const WINNING_COMBINATIONS = [
     [2, 4, 6],
 ];
 
-export class Board {
-    constructor(board=null) {
-        this.state = board ? board : Array.from(Array(9).keys());
+// Game board class
+class Board {
+    constructor(board) {
+        this.state = board instanceof Board ? board : Array.from(Array(9).keys());
     }
 
     insert(value, index) {
-        if (typeof(this.state[index]) === "number") this.state[index] = value;
-        return this.state;
+        this.state[index] = value;
+    }
+
+    get(index) {
+        return this.state[index];
     }
 
     isTerminal() {
@@ -28,7 +34,9 @@ export class Board {
                 return {winner: 'O', drow: false, winIndex: combination};
             }
         }
-        if (this.state.every((cell) => typeof(cell) === "string")) return {winner: false, drow: true};
+        if (this.state.every((cell) => typeof(cell) === "string")) {
+            return {winner: false, drow: true};
+        }
         return {winner: false, drow: false};
     }
 
